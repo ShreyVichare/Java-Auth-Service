@@ -4,6 +4,7 @@ package org.example.service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.example.entities.UserInfo;
+import org.example.eventProducer.UserInfoProducer;
 import org.example.model.UserInfoDto;
 import org.example.repository.UserInfoRepository;
 import org.slf4j.Logger;
@@ -29,6 +30,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private final UserInfoRepository userInfoRepository;
     @Autowired
     private final PasswordEncoder passwordEncoder;
+    @Autowired
+    private final UserInfoProducer userInfoProducer;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -58,6 +61,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String userId = UUID.randomUUID().toString();
         userInfoRepository.save(new UserInfo(userId, userInfoDto.getUsername(), userInfoDto.getPassword(), new HashSet<>()));
 
+        userInfoProducer.sendEventToKafka(userInfoDto);
         return true;
 
     }

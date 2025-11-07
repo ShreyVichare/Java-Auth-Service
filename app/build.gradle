@@ -51,6 +51,8 @@ dependencies {
     // Testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation libs.junit
+
+    implementation 'org.springframework.kafka:spring-kafka'
 }
 
 java {
