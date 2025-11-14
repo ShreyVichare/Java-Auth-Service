@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6fc57f5d-71fb-49a7-a9c9-6b0a89920d21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/bin/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/auth/JwtAuthFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/auth/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/auth/UserConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/controller/AuthController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/controller/TokenController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/entities/RefreshToken$RefreshTokenBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/entities/RefreshToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/entities/UserInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/entities/UserRole.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/model/UserInfoDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/repository/RefreshTokenRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/repository/UserInfoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/request/AuthRequestDto$AuthRequestDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/request/AuthRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/request/RefreshTokenRequestDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/response/JwtResponseDto$JwtResponseDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/response/JwtResponseDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/service/CustomUserDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/service/JwtService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/service/RefreshTokenService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/main/org/example/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bin/test/org/example/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/serializer/UserInfoSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/auth/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/auth/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/auth/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/auth/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/model/UserInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/model/UserInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
