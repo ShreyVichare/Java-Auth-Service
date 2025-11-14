@@ -1,7 +1,7 @@
 package org.example.controller;
 
-
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.example.entities.RefreshToken;
 import org.example.model.UserInfoDto;
 import org.example.response.JwtResponseDto;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
 @RestController
+@Slf4j
 public class AuthController {
 
     @Autowired
@@ -29,19 +30,28 @@ public class AuthController {
     private UserDetailsServiceImpl userDetailsService;
 
     @PostMapping("auth/v1/signup")
-    public ResponseEntity SignUp(@RequestBody UserInfoDto userInfoDto) {
+    public ResponseEntity<?> signUp(@RequestBody UserInfoDto userInfoDto) {
         try {
             Boolean isSignUped = userDetailsService.signupUser(userInfoDto);
             if (Boolean.FALSE.equals(isSignUped)) {
                 return new ResponseEntity<>("Already Exist", HttpStatus.BAD_REQUEST);
             }
+
             RefreshToken refreshToken = refreshTokenService.createRefreshToken(userInfoDto.getUsername());
             String jwtToken = jwtService.GenerateToken(userInfoDto.getUsername());
-            return new ResponseEntity<>(JwtResponseDto.builder().accessToken(jwtToken).
-                    token(refreshToken.getToken()).build(), HttpStatus.OK);
+
+            return new ResponseEntity<>(
+                    JwtResponseDto.builder()
+                            .accessToken(jwtToken)
+                            .token(refreshToken.getToken())
+                            .build(),
+                    HttpStatus.OK
+            );
+
         } catch (Exception ex) {
-            return new ResponseEntity<>("Exception in User Service", HttpStatus.INTERNAL_SERVER_ERROR);
+            log.error("Exception in User Service", ex);
+            return new ResponseEntity<>("Exception in User Service: " + ex.getMessage(),
+                    HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
 }
